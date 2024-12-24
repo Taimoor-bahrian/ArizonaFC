@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="style.css"/>
+  <script src="admin/js/jquery-2.1.4.min.js"></script>
+
+</head>
+<body bgcolor="#000000">
+<div>
+  &nbsp; &nbsp; &nbsp; &nbsp; <a class="btn btn-success" href="admin/login.php" style="color: white;">Admin Login </a> 
+
+<marquee class="marquee" direction="down" behavior="slide"   >
+<h1 class="h1" align="center"   >       <img src="Ice_Fishing_logo.png" class="img"    / > ARIZZONA FISHING CLUB </h1></marquee>
+</div>
+<div>
+<ul>
+  <li><a class="active" href="index.html">HOME</a></li>
+ <li> <a  href="boats.html">BOATS</a></li>
+ <li> <a  href="equip.html">EQUIPMENTS</a></li>
+ <li> <a  href="packages.php">PACKAGES</a></li>
+ <li> <a  href="about.html">ABOUT US</a></li>
+ <li> <a  href="contact.html">CONTACT US</a></li>
+ <li> <a  href="lisence.html">LISENCE</a></li>
+ <br>
+ 
+</ul>
+</div>
+<div style="margin-left:25%; padding:10px 16px; height:60px;" >
+   <div id="slideshow">
+   <div>
+     <img src="5p.jpg" style="width:900px;height:400px">
+   </div>
+   <div>
+     <img src="orig.jpg" style="width:900px;height:400px">
+   </div>
+   <div>
+    <img src="a8c7eef0f811543a957db841332b1ec7.jpg" style="width:900px;height:400px">
+   </div>
+</div>
+
+<marquee class="marquee1"><h1 style="background-color: #000000" style="color:#CCCCCC">WELCOME TO ARIZONA FISHING CLUB </h1></marquee><hr>
+<br>
+<br>
+<h1 style="color:#FFFFFF"><U> OFFICE DETAIL</U> </h1>
+  <BR>
+  <h3  style="color:#FFFFFF"> fishingclub@gmail.com </h3>
+  <h3  style="color:#FFFFFF">CONTACT: 0152829199  </h3>
+  <h3  style="color:#FFFFFF">ADDRESS: KHARADAR E JOHAR NORTH PLOT 27B  </h3>
+  <h3  style="color:#FFFFFF"> FAX: 12FC@HOTMAIL.COM </h3>
+<img src="fb.png" style="width:100px" style="height:50px"/>
+  <img src="y.png" style="width:100px" style="height:50px"/>
+  <img src="t.png" style="width:100px" style="height:50px"/>
+  <img src="i.png" style="width:100px" style="height:50px"/>
+  
+  <hr>
+  <h4 style="color:#CCCCCC"> copyright2018 reserved</h4>
+
+</div>
+
+
+<script type="text/javascript">
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+</script>
+</body>
+</html>

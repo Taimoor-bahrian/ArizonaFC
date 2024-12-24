@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body bgcolor="#000000">
+<div>
+  &nbsp;&nbsp; &nbsp; &nbsp; <a class="btn btn-success" href="admin/login.php" style="color: white">Admin Login </a> 
+<marquee class="marquee" direction="down" behavior="slide"   >
+<h1 class="h1" align="center"   >       <img src="Ice_Fishing_logo.png" class="img"    / > ARIZZONA FISHING CLUB </h1></marquee>
+</div>
+<div>
+<ul>
+  <li><a  href="index.html">HOME</a></li>
+ <li> <a  href="boats.html">BOATS</a></li>
+ <li> <a  href="equip.html">EQUIPMENTS</a></li>
+ <li> <a  href="packages.php">PACKAGES</a></li>
+ <li> <a class="active" href="about.html">ABOUT US</a></li>
+ <li> <a  href="contact.html">CONTACT US</a></li>
+ <li> <a  href="lisence.html">LISENCE</a></li>
+ <br>
+ <!-- <div>
+ <video width="330"  controls autoplay >
+        <source src="e.mp4" type="video/mp4">
+        <source src="e.ogg" type="video/ogg">
+      
+        
+      </video>
+      
+      
+       </div> -->
+      </ul>
+      
+      </div>
+
+
+  <?php 
+$pagetype=$_GET['type'];
+$sql = "SELECT type,detail from tblpages where type=:pagetype";
+$query = $dbh -> prepare($sql);
+$query->bindParam(':pagetype',$pagetype,PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{   
+
+?>
+
+      
+      <div style="margin-left:29%; padding:10px 19px; height:60px;" >
+<h1 align="center" style="color:#CCCCCC"> ABOUT US  </h1>
+ <p style="color:#FFFFFF">On September 1, 2018 , the ARIZONA Fishing Club was first organized with forty-nine charter members. The first meeting of this newly organized club was held on that date in Charles Reimuller's Hardware Store located on F Street , near 8 th Ave , arizona fishing club. The following men attended the first meeting of our Club: David McIntyre, George J. Simpson, Frank Kain, Howard Kain, Charles Reimuller, Henry Reimuller, Harry C. Cole, William A. Herbert, Chaster Robotham, and F. R. Lefferts, Jr. A committee was appointed to nominate officers and drew up a constitution and by-laws to be acted upon at a meeting scheduled for September, 2018. At the meeting, held on September 8, 2018 , the constitution and by-laws presented by the committee was adopted. The following named officers were elected and installed:CEO: RUMAFHA OMER President, WAQAS NIAZI S; Vice-President, TAIMOOR AND HARIS. Cole; Treasurer, F.R. Lefferts, Jr., and Secretary, B.C. Reimuller. Board of Governors: David McIntyre, Chester Robotham, J.Harry Mount, William A. Herber and L.J. Brown. The manes of the forty-nine members who had signed the charter roll were read and approved. Annual dues were only $1.00.
+
+Arrangements were made with the Ocean Pier Co. to to construct a clubroom and for use of the pier. In order to provide a meeting place for the club, the Ocean Pier Company built what was at that time considered a commodious clubroom. To further create a greater interest in pier fishing, season tickets were issued to the member of the Belmar Fishing Club at a special rate. </p>  
+
+<marquee class="marquee1"><h1 style="background-color: #000000" style="color:#CCCCCC">WELCOME TO ARIZONA FISHING CLUB </h1></marquee><hr>
+<br>
+<br>
+<h1 align="center" style="color:#CCCCCC"> OUR OFFICE  </h1>
+ <img src="BOATHOUSE.jpg" style="width:100%"/>
+ <hr >
+ <br >
+ 
+ <h1 style="color:#CCCCCC" > PEOPLE EXPERIENCE </h1>
+ 
+ <div class="gallery">
+  <a target="_blank" >
+    <img src="090913_CANUCKS_00449-2.jpg" width="900" height="600" style="border-radius:30%">
+  </a>
+  <div class="desc"> <br>they experienced very well and enjoy alot and caught more than 30 fishes</div>
+</div>
+ 
+
+<div class="gallery">
+  <a target="_blank" >
+    <img src="PaulEgersheim-Group31-800x600.jpg" width="900" height="600" style="border-radius:30%">
+  </a>
+  <div class="desc"> <br>they experienced very well and enjoy alot and caught more than 30 fishes<br></div>
+</div>
+ 
+
+<div class="gallery">
+  <a target="_blank" >
+    <img src="wahoo-Large.jpg" width="900" height="600" style="border-radius:30%">
+  </a>
+  <div class="desc"><br> they experienced very well and enjoy alot and caught biggest fish<br></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" >
+    <img  src="Photo_Jul_30,_12_48_45_PM2.jpg" width="900" height="600" style="border-radius:30%">
+  </a>
+  <div class="desc"><br> they experienced very well and enjoy alot and caught more than 30 fishes.<br></div>
+</div>
+ <br>
+
+
+</div>
+
+      
+</body>
+</html>

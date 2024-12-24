@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.button {
+    background-color: #0099FF;
+    border: outset;
+    color: white;
+    padding: 100px 50px;
+    text-align: top;
+    text-decoration: blink ;
+    font-size: 85px;
+    margin-right:15px;
+	margin-left:15px;
+	margin-top:-20px;
+    cursor: pointer;
+	width:390px;
+	orphans:inherit;
+	}
+	
